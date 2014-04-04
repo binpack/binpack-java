@@ -96,13 +96,11 @@ public class Bin {
 
         int shift = 0;
         long num = 0;
-        if (x < 0) {
-            while (x < 0) {
-                x &= 0x7f;
-                num |= x << shift;
-                x = (long) ctx.buf[ctx.pos++];
-                shift += 7;
-            }
+        while (x < 0) {
+            x &= 0x7f;
+            num |= x << shift;
+            x = (long) ctx.buf[ctx.pos++];
+            shift += 7;
         }
 
         // not length information
@@ -376,6 +374,7 @@ public class Bin {
         int pos; // start index
         String charsetName;
     }
+
 
     private static class TagInfo {
         byte type;
