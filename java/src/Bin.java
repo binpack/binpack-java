@@ -364,7 +364,7 @@ public class Bin {
         }
 
         // last number byte: 0000 0xxx
-        while (l > BIN_TAG_PACK_INTEGER) {
+        while (l > BIN_TAG_PACK_INTEGER || l >>> 3 > 0) {
             out.write((byte) (BIN_NUM_SIGN_BIT | (l & BIN_NUM_MASK)));
             l = l >>> 7;
         }
