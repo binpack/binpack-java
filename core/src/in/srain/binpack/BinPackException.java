@@ -1,4 +1,4 @@
-package com.srain.binpack;
+package in.srain.binpack;
 
 public class BinPackException extends Exception {
 
