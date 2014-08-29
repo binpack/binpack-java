@@ -4,8 +4,16 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+enum A {
+    JAVA, FLASH,
+}
+
 public class Main {
-    public static void main(String[] args) throws  IOException {
+    public static void main(String[] args) throws IOException {
+
+        double[] d = new double[]{1, 2, 3};
+        byte[] str = BinPack.encode(d, "UTF-8");
+        Object o = BinPack.decode(str, "UTF-8");
 
         String strToBs = "All men are created equal.";
         Map<String, Object> m = new HashMap<String, Object>();

@@ -13,13 +13,13 @@
     <artifactId>binpack-test</artifactId>
     <packaging>jar</packaging>
     <name>BinPack-test</name>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1=-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
             <groupId>in.srain</groupId>
             <artifactId>binpack</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.2-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

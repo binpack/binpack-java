@@ -13,7 +13,7 @@
     <artifactId>binpack</artifactId>
     <packaging>jar</packaging>
     <name>BinPack</name>
-    <version>1.0.1</version>
+    <version>1.0.2-SNAPSHOT</version>
 
     <build>
         <sourceDirectory>src</sourceDirectory>

@@ -81,8 +81,12 @@ public class BinPack {
             packFloat(out, ((Float) obj));
         } else if (obj instanceof Collection) {
             packList(out, (Collection) obj, charsetName);
+        } else if (obj.getClass().isArray()) {
+            // packList(out, Arrays.asList(obj), charsetName);
         } else if (obj instanceof Map) {
             packMap(out, (Map) obj, charsetName);
+        } else if (obj instanceof Enum) {
+            packInteger(out, ((Enum) obj).ordinal());
         } else {
             packString(out, "unsupported-type-" + obj.getClass().getName(), "UTF-8");
         }
